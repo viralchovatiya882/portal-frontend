@@ -1,0 +1,70 @@
+.spirit-detail {
+    margin: 15px 0;
+    border: 1px solid #c3c3c3;
+    padding: 10px 10px;
+
+    .detail-item {
+
+        border-right: 1px solid #929292;
+
+        label {
+            font-size: 12px;
+            margin-right: 5px;
+            color: #929292;
+        }
+
+        span {
+            font-size: 12px;
+            color: #000000;
+        }
+
+    }
+
+    .detail-column-last {
+        .detail-item {
+            border-right: none;
+        }
+    }
+
+    label {
+        text-transform: capitalize;
+        color: #585858;
+        width: 70%;
+    }
+
+    p {
+        margin-top: 10px;
+        font-size: 10px;
+        color: #585858;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .spirit-detail {
+        .detail-item {
+            border: 0px;
+        }
+    }
+    .select-case-good-btns {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    .total-case-detail {
+        margin-bottom: 10px;
+    }
+
+    .edit-order-title-text {
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 15px;
+    }
+}
+
+.bundle_selection.active {
+    // background-color: #fafafa;
+    background-color: #ece6e6;
+}

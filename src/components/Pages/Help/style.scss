@@ -1,0 +1,28 @@
+.issue_image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .issue_image_container {
+    display: flex;
+    height: 400px;
+    width: 650px;
+    background-color: rgb(148, 148, 148);
+    margin-bottom: 20px;
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      margin: auto;
+    }
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: self-start;
+    align-self: flex-start;
+    label {
+      font-weight: 500;
+    }
+  }
+}

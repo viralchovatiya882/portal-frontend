@@ -1,0 +1,18 @@
+.changelog-tooltip {
+  .ant-tooltip-content {
+    width: 390px;
+    .tooltip-extended {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      label {
+        font-size: 12px;
+        font-weight: 600;
+        width: 140px;
+      }
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+}

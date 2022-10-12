@@ -1,0 +1,361 @@
+.add-spirit-modal {
+  .ant-select-selection-placeholder {
+    font-size: 14px;
+    color: #bfbfbf;
+  }
+
+  ::placeholder {
+    font-size: 14px;
+    color: #bfbfbf;
+  }
+
+  .ant-form-item-label > label {
+    text-transform: uppercase;
+    font-weight: 700;
+    // font-size: 13px;
+  }
+
+  .ant-input {
+    color: #8e8e8e;
+    font-size: 16px;
+  }
+
+  .ant-select-selector {
+    border: none !important;
+    border-bottom: 1px solid #b1b1b1 !important;
+    padding-left: 0px !important;
+  }
+
+  .ant-select-focused .ant-select-selector,
+  .ant-select-selector:focus,
+  .ant-select-selector:active,
+  .ant-select-open .ant-select-selector {
+    border-color: #d9d9d9 !important;
+    box-shadow: none !important;
+  }
+
+  .ant-select-single .ant-select-selector .ant-select-selection-search {
+    left: 0;
+  }
+
+  .ant-select-focused,
+  .ant-select-open {
+    border: none !important;
+    border-bottom: 1px solid #b1b1b1 !important;
+    border-color: #fff !important;
+    box-shadow: none !important;
+  }
+
+  .ant-input-affix-wrapper-focused {
+    border: none !important;
+    border-bottom: 1px solid #b1b1b1 !important;
+    border-color: none !important;
+    box-shadow: none !important;
+  }
+
+  .ant-input-affix-wrapper {
+    border: none !important;
+    border-bottom: 1px solid #b1b1b1 !important;
+    padding: 4px 0px;
+  }
+
+  .ant-picker {
+    border: none !important;
+    border-bottom: 1px solid #b1b1b1 !important;
+    padding-left: 0px;
+    padding-bottom: 8px;
+  }
+
+  .ant-picker-focused {
+    border-color: #d9d9d9 !important;
+    box-shadow: none !important;
+    padding-left: 0px;
+  }
+
+  .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    display: inline-block;
+    margin-right: 0px;
+    color: #ff4d4f;
+    font-size: 14px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: "";
+  }
+
+  .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::after {
+    display: inline-block;
+    margin-left: 4px;
+    color: #ff4d4f;
+    font-size: 14px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: "*";
+  }
+
+  .detail-column {
+    height: 100%;
+    border-right: 1px solid #8a8a8a;
+  }
+
+  .detail-column-last {
+    border: none;
+  }
+
+  .ant-select-selection-item {
+    font-size: 14px;
+  }
+
+  .ant-table-selection-col {
+    width: 10px;
+  }
+
+  label {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-right: 5px;
+  }
+
+  // .spirit-table {
+  //   margin-top: 20px;
+  // }
+
+  .spirit-detail {
+    margin: 15px 0;
+    border: 1px solid #c3c3c3;
+    padding: 10px 10px;
+
+    .detail-item {
+      // border-right: 1px solid #333;
+      label {
+        font-size: 12px;
+        margin-right: 5px;
+        color: #929292;
+      }
+
+      span {
+        font-size: 12px;
+        color: #000000;
+      }
+    }
+
+    label {
+      text-transform: capitalize;
+      color: #585858;
+      width: 70%;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 10px;
+      color: #585858;
+    }
+  }
+
+  .quantity-section {
+    margin-top: 20px;
+  }
+
+  .ant-form-item {
+    margin-bottom: 0px;
+  }
+
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td,
+  .ant-table tfoot > tr > th,
+  .ant-table tfoot > tr > td {
+    padding: 12px 12px;
+  }
+}
+
+.sales-order-list {
+  // padding: 10px 20px;
+
+  // .add-spirit-button {
+  //   margin-bottom: 30px;
+  // }
+
+  .sales_order__documents_upload {
+    min-height: 341px;
+  }
+
+  .additional-charges {
+    // margin-top: 40px;
+
+    .ant-input-prefix {
+      span {
+        margin-right: 2px;
+        color: #8e8e8e;
+      }
+    }
+  }
+
+  // .text-area-sales {
+  //   .ant-form-item textarea.ant-input {
+  //     height: 150px;
+  //   }
+  // }
+
+  .additional-table {
+    .ant-table-thead {
+      th[title="Action"] {
+        text-align: center;
+      }
+    }
+
+    .s-delete {
+      text-align: center;
+    }
+  }
+
+  .add-charges-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .add-total-cost {
+    margin-left: 30px;
+    text-transform: uppercase;
+
+    label {
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .total-cost {
+      display: flex;
+      color: #585858;
+
+      p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      span {
+        // font-size: 14px;
+        margin-right: 2px;
+      }
+
+      svg {
+        margin-top: 10px;
+        margin-right: 4px;
+        font-size: 18px;
+        color: #8a8a8a;
+      }
+    }
+  }
+
+  .spirit-summary {
+    margin-top: 25px;
+  }
+
+  .final-detail {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+    font-size: 12px;
+
+    label {
+      text-transform: uppercase;
+      color: #000000d9;
+      font-weight: bolder;
+    }
+
+    .total-cost {
+      display: flex;
+      color: #585858;
+
+      p {
+        // margin-top: 10px;
+        margin-bottom: 10px;
+        // font-size: 16px;
+      }
+
+      span {
+        // font-size: 18px;
+        margin-right: 2px;
+      }
+
+      svg {
+        // margin-top: 10px;
+        margin-right: 4px;
+        // font-size: 18px;
+        color: #8a8a8a;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .upload-document-box {
+    flex-wrap: wrap;
+
+    button {
+      font-size: 13px;
+      padding: 0px 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .upload-document-box {
+    flex-wrap: initial;
+
+    button {
+      font-size: 14px;
+      padding: 4px 15px;
+    }
+  }
+
+  .sales-order-list {
+    padding: 0px;
+
+    .add-total-cost {
+      margin-left: 0px;
+    }
+
+    .additional-charges {
+      margin-top: 0px;
+    }
+  }
+
+  .select-case-good-btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .total-case-detail {
+    margin-bottom: 10px;
+  }
+
+  .spirit-detail {
+    .detail-column {
+      border: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .upload-document-box {
+    flex-wrap: wrap;
+
+    button {
+      font-size: 13px;
+      padding: 0px 8px;
+    }
+  }
+}
+
+.add__spirit__modal {
+  .add__bundle__order {
+    form {
+      width: 35%;
+    }
+  }
+  .ant-modal-body {
+    padding: 10px 24px !important;
+  }
+}

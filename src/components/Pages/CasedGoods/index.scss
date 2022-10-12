@@ -1,0 +1,30 @@
+// .view_inventory__edit_inventory {
+//     .ant-modal-body {
+//         padding: 0 24px 24px 24px;
+//     }
+//     .ant-page-header {
+//         padding: 0;
+//     }
+// }
+
+.inventory__add_cases {
+    .ant-form-item {
+        margin: 0;
+    }
+
+    .ant-input-number-disabled .ant-input-number-input {
+        color: #574040;
+    }
+}
+
+.edit_price_inventory {
+    .ant-input-number-disabled {
+        color: #000;
+    }
+}
+
+.edit__rotation_number__label {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+}

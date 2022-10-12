@@ -1,0 +1,374 @@
+.order_details_list {
+    .order__details_count {
+        p {
+            margin: 0;
+        }
+    }
+
+    // .ant-collapse-header {
+    //     padding: 0 16px !important;
+    // }
+
+    .ant-divider-horizontal.ant-divider-with-text {
+        margin: 5px 0;
+    }
+
+    .order_details__textarea {
+        textarea.ant-input {
+            min-height: 70px;
+        }
+    }
+
+    .label_text {
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 11px;
+    }
+
+    .head_officer_action__status {
+        float: left;
+        width: 100%;
+
+        .full-fillment-status-select {
+            min-width: 160px;
+        }
+
+        .ant-select-selector,
+        .ant-input {
+            border: none !important;
+            border-bottom: 1px solid #b1b1b1 !important;
+            padding-left: 0px !important;
+        }
+
+        .ant-form-inline {
+            flex-wrap: inherit;
+        }
+
+        .ant-select-focused .ant-select-selector,
+        .ant-select-selector:focus,
+        .ant-input:focus,
+        .ant-select-selector:active,
+        .ant-input-focused,
+        .ant-select-open .ant-select-selector {
+            border-color: #d9d9d9 !important;
+            box-shadow: none !important;
+        }
+
+        .ant-select-single .ant-select-selector .ant-select-selection-search {
+            left: 0;
+        }
+    }
+
+    .common-border {
+        border-radius: 10px;
+        min-height: 100px;
+        float: left;
+        width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+
+    p {
+        // float: left;
+        width: 90%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .text-overflow {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .ant-form-item textarea.ant-input[disabled] {
+        color: #000;
+        min-height: 80px;
+    }
+}
+
+.estimated_shipping_date {
+    .ant-row.ant-form-item {
+        margin-bottom: 0;
+    }
+}
+
+// #custom_margin_form_item {
+//     .ant-row.ant-form-item {
+//         margin-bottom: 0;
+//     }
+// }
+
+.orderList__orderDetails,
+.order_details__summary {
+    .ant-row {
+        box-shadow: 0 0 10px #e1e1ec;
+        padding: 20px;
+        background-color: #fff;
+        margin-bottom: 15px;
+        border-radius: 11px;
+    }
+}
+
+.order_details__summary {
+    .CFA {
+        // position: absolute;
+        // top: -8%;
+        // right: 0;
+        margin: 0 0 20px 0;
+        float: right;
+        width: 100%;
+        text-align: right;
+    }
+}
+
+.customer_documents_upload_confirmation {
+    .ant-modal-confirm-btns {
+        margin-top: 0;
+    }
+}
+
+.sales_order__uploaded_list {
+    border: 1px solid #ccc;
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+    min-height: 150px;
+    padding: 10px;
+    border-radius: 15px;
+    word-break: break-all;
+    height: 40vh;
+    overflow: auto;
+}
+
+.order_details__tracking_details {
+    .ant-steps-item-title {
+        font-size: 13px;
+    }
+
+    .ant-steps-item-description {
+        font-size: 12px !important;
+    }
+
+    .ant-steps-vertical > .ant-steps-item .ant-steps-item-title {
+        line-height: 22px !important;
+    }
+}
+
+.proforma_view__document__name {
+    .ant-checkbox + span {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding: 0 20px 0 10px;
+        white-space: nowrap;
+    }
+}
+
+.document_update__order_details {
+    .ant-modal-body {
+        padding: 0 24px 24px;
+    }
+}
+
+.proforma_view__order_details {
+    .review-document {
+        .view-document {
+            float: left;
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+}
+
+.sales_order__documents_upload .ant-upload-drag .ant-upload-btn p {
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .order_details_list .head_officer_action__status .full-fillment-status-select {
+        max-width: 230px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .order_details_list .head_officer_action__status .full-fillment-status-select {
+        max-width: 200px;
+    }
+
+    .upload-document-box {
+        flex-wrap: wrap;
+
+        button {
+            font-size: 13px;
+            padding: 0px 8px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 960px) {
+    .order_details_list .head_officer_action__status .full-fillment-status-select {
+        max-width: 140px;
+        min-width: 140px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .order_details__summary {
+        .CFA {
+            top: -6%;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .order_details__summary {
+        .CFA {
+            top: -5%;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .order_details_list .head_officer_action__status .full-fillment-status-select {
+        max-width: 200px;
+        min-width: 200px;
+    }
+
+    .upload-document-box {
+        flex-wrap: initial;
+
+        button {
+            font-size: 14px;
+            padding: 4px 15px;
+        }
+    }
+
+    .order_details_list {
+        padding: 25px 0px;
+
+        .order__details_count p {
+            margin: 10px 0;
+        }
+
+        p {
+            width: 100%;
+        }
+
+        .add-update-order-title {
+            margin-top: 25px;
+        }
+
+        .shiping-detail-btns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+    }
+
+    .convert_customer__order_details {
+        .review-document {
+            padding: 0 !important;
+        }
+    }
+
+    .proforma_view__order_details {
+        .ant-modal-body {
+            padding: 0 !important;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .order_details__summary {
+        .CFA {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            position: relative;
+            gap: 5px;
+        }
+    }
+
+    .order_details_list .head_officer_action__status .full-fillment-status-select {
+        min-width: 100px !important;
+    }
+
+    .upload-document-box {
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        button {
+            font-size: 13px;
+            padding: 0px 8px;
+        }
+    }
+}
+
+.sales_order__documents_upload {
+    .sales_order__uploaded_list {
+        border: 1px solid #ccc;
+        // float: left;
+        // width: 100%;
+        margin-top: 50px;
+        min-height: 150px;
+        padding: 10px;
+        border-radius: 15px;
+        height: 40vh;
+        overflow: auto;
+        word-break: break-all;
+    }
+
+    .ant-btn:focus,
+    .ant-btn:hover {
+        border-color: transparent;
+    }
+
+    .upload-document-box {
+        display: block;
+
+        &.doc_not_uploaded {
+            .ant-upload.ant-upload-drag {
+                .ant-upload-btn {
+                    padding: 15px 0;
+                }
+            }
+        }
+
+        .ant-upload.ant-upload-drag {
+            background: #faf9ff;
+            border: 1px dashed #443f5f;
+            border-radius: 12px;
+
+            .ant-upload-btn {
+                padding: 10px 0px;
+            }
+
+            p.ant-upload-text {
+                font-size: 12px !important;
+                color: #443f5f;
+                line-height: 24px;
+                margin: 0px 0px 2px;
+            }
+
+            p.ant-upload-text span {
+                color: #38479e;
+                text-decoration: underline;
+            }
+
+            p.ant-upload-drag-icon svg {
+                font-size: 24px;
+            }
+
+            p.ant-upload-drag-icon {
+                margin-bottom: 15px !important;
+
+                .anticon {
+                    font-size: 30px !important;
+                    color: #5f5f5f !important;
+                }
+            }
+        }
+    }
+}

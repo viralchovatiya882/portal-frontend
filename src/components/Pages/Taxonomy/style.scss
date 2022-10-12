@@ -1,0 +1,14 @@
+// .taxonomy_masterlist_data::-webkit-scrollbar {
+//   display: none;
+// }
+
+@media screen and (max-width: 420px) {
+    .ant-table-pagination {
+        &.ant-pagination {
+            .ant-pagination-total-text {
+                display: block;
+                width: 97%;
+            }
+        }
+    }
+}

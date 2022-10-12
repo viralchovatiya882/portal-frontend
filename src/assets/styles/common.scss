@@ -1,0 +1,279 @@
+hr {
+    background-color: #5f5f5f;
+}
+
+.ant-form-item-label > label {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.ant-input {
+    color: #8e8e8e;
+}
+
+.ant-select-selector {
+    border: none !important;
+    border-bottom: 1px solid #b1b1b1 !important;
+    padding-left: 0px !important;
+}
+
+.ant-input-number {
+    @extend .ant-select-selector;
+
+    .ant-input-number-input {
+        padding-left: 0px !important;
+    }
+}
+
+.ant-select-focused .ant-select-selector,
+.ant-select-selector:focus,
+.ant-input-number-focused,
+.ant-select-selector:active,
+.ant-select-open .ant-select-selector {
+    border-color: #d9d9d9 !important;
+    box-shadow: none !important;
+}
+
+.ant-select-single .ant-select-selector .ant-select-selection-search {
+    left: 0;
+}
+
+.ant-select-focused,
+.ant-select-open {
+    border: none !important;
+    border-bottom: 1px solid #b1b1b1 !important;
+    border-color: #fff !important;
+    box-shadow: none !important;
+
+    input {
+        color: #4043ff;
+    }
+
+    .ant-select-selection-item {
+        color: #4043ff;
+    }
+}
+
+// .ant-input-affix-wrapper-disabled {
+//     background-color: #fff;
+// }
+
+.ant-input-affix-wrapper-focused {
+    border: none !important;
+    border-bottom: 1px solid #b1b1b1 !important;
+    border-color: none !important;
+    box-shadow: none !important;
+
+    input {
+        color: #4043ff;
+    }
+}
+
+.ant-input-affix-wrapper {
+    border: none !important;
+    border-bottom: 1px solid #b1b1b1 !important;
+    padding: 4px 0px;
+}
+
+.ant-picker {
+    border: none !important;
+    border-bottom: 1px solid #b1b1b1 !important;
+    padding-left: 0px;
+    padding-bottom: 8px;
+}
+
+.ant-picker-focused {
+    border-color: #d9d9d9 !important;
+    box-shadow: none !important;
+    padding-left: 0px;
+
+    input {
+        color: #4043ff;
+    }
+}
+
+.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    display: inline-block;
+    margin-right: 0px;
+    color: #ff4d4f;
+    font-size: 14px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: "";
+}
+
+.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::after {
+    display: inline-block;
+    margin-left: 4px;
+    color: #ff4d4f;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: "*";
+}
+
+.text-area-sales {
+    .ant-input-search .ant-input:hover,
+    .ant-input-search .ant-input:focus,
+    .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover,
+    .ant-input-affix-wrapper:focus,
+    .ant-input-affix-wrapper-focused,
+    .ant-input:focus,
+    .ant-input-focused {
+        border-color: #d9d9d9;
+        border: 1px solid #4043ff;
+        color: #4043ff;
+    }
+}
+
+.ant-divider-horizontal.ant-divider-with-text {
+    border-top-color: #a5a4bf;
+}
+
+.PhoneInput input:focus-visible {
+    outline: none;
+}
+
+.PhoneInput {
+    .PhoneInputCountrySelectArrow {
+        display: block;
+        content: "";
+        width: 0.4em !important;
+        height: 0.4em !important;
+        margin-left: 0.45em !important;
+        border-style: solid !important;
+        border-top-width: 0 !important;
+        border-left-width: 0 !important;
+        border-color: #000 !important;
+        border-bottom-width: 1px !important;
+        border-right-width: 1px !important;
+        transform: rotate(45deg) !important;
+        opacity: 0.45 !important;
+    }
+
+    input {
+        border-right: none !important;
+        border-left: none !important;
+        border-top: none !important;
+        border-bottom: 1px solid #b1b1b1 !important;
+        box-shadow: none !important;
+
+        :focus {
+            border-color: #d9d9d9 !important;
+            box-shadow: none !important;
+        }
+    }
+}
+
+.common_card_section {
+    box-shadow: 0 0 10px #e1e1ec;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    border-radius: 11px;
+}
+
+.sales_order__documents_upload {
+    .sales_order__uploaded_list {
+        border: 1px solid #ccc;
+        margin-top: 50px;
+        min-height: 150px;
+        padding: 10px;
+        border-radius: 15px;
+        word-break: break-all;
+        height: 40vh;
+        overflow: auto;
+    }
+
+    .ant-btn:focus,
+    .ant-btn:hover {
+        border-color: transparent;
+    }
+
+    .upload-document-box {
+        display: block;
+
+        &.doc_not_uploaded {
+            .ant-upload.ant-upload-drag {
+                .ant-upload-btn {
+                    padding: 15px 0px;
+                }
+            }
+        }
+
+        .ant-upload.ant-upload-drag {
+            background: #faf9ff;
+            border: 1px dashed #443f5f;
+            border-radius: 12px;
+
+            .ant-upload-btn {
+                padding: 23px 0px;
+            }
+
+            p.ant-upload-text {
+                font-size: 12px !important;
+                color: #443f5f;
+                line-height: 24px;
+                margin: 0px 0px 2px;
+            }
+
+            p.ant-upload-text span {
+                color: #38479e;
+                text-decoration: underline;
+            }
+
+            p.ant-upload-drag-icon svg {
+                font-size: 24px;
+            }
+
+            p.ant-upload-drag-icon {
+                margin-bottom: 15px !important;
+
+                .anticon {
+                    font-size: 30px !important;
+                    color: #5f5f5f !important;
+                }
+            }
+        }
+
+        .task__uploaded_list {
+            max-height: 128px;
+            overflow-y: scroll;
+            .ant-table-content {
+                thead.ant-table-thead > tr > th.ant-table-cell {
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 18px;
+                    letter-spacing: -0.01em;
+                    color: #6f767e;
+                    padding: 13px 8px;
+                    background-color: #ffffff;
+                    box-shadow: inset 0px -1px 0px rgba(102, 102, 102, 0.08);
+                    border: 0px;
+                    height: 45px;
+                }
+
+                tbody.ant-table-tbody > tr > td.ant-table-cell {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 24px;
+                    letter-spacing: -0.01em;
+                    color: #1a1d1f;
+                    padding: 6px 8px;
+                    box-shadow: inset 0px -1px 0px rgba(102, 102, 102, 0.08);
+                    border: 0px;
+                    height: 45px;
+                }
+            }
+        }
+    }
+}
+
+.pdf_name_ellipsis,
+.document_name_ellipsis div {
+    display: inline-block;
+    // width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

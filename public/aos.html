@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AOS Document</title>
+    <style>
+      td {
+        padding: 5px;
+      }
+
+      @media print {
+        .page-break {
+          page-break-before: always;
+        }
+      }
+
+      table {
+        page-break-inside: auto;
+      }
+
+      tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+      }
+
+      tr {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table class="header-logo" style="width: 100%; text-align: center">
+      <tr>
+        <td style="width: 100%">
+          <img
+            width="200px"
+            height="200px"
+            src="data:image/png;base64,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"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 100%">Duncan Taylor Scotch Whishky Ltd</td>
+      </tr>
+      <tr>
+        <td style="width: 100%">EST 1938</td>
+      </tr>
+    </table>
+    <table
+      class="table-start"
+      style="
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+      "
+    >
+      <tr style="border: 1px solid black; font-size: 35px">
+        <td>Agreement Of Sale</td>
+      </tr>
+      <tr style="border: 1px solid black">
+        <td>
+          We hereby have pleasure in confirming your order in accordance with
+          the details below.Please can you sign and return by email to Duncan
+          Taylor Scotch Whisky Ltd.
+        </td>
+      </tr>
+    </table>
+    <table
+      class="detail"
+      style="width: 100%; text-align: left; border-collapse: collapse"
+    >
+      <tr>
+        <td style="border: 1px solid black">DT Sales Order: TBD</td>
+        <td style="border: 1px solid black">Payment Terms: TBD</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black">Terms of Sale: TBD</td>
+        <td style="border: 1px solid black"></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="border: 1px solid black">
+          Special Conditions: TBD
+        </td>
+      </tr>
+    </table>
+    <table
+      class="detail"
+      style="
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      "
+    >
+      <thead>
+        <tr style="font-weight: bold">
+          <td style="border: 1px solid black; width: 60%">
+            Product Description
+          </td>
+          <td style="border: 1px solid black">Quantity CS</td>
+          <td style="border: 1px solid black">Price GBP</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border: 1px solid black; width: 60%">
+            Black Bull 10 Year Old Retro Edition BLACK BULL null 10YO 18/34850%
+            6x700ml
+          </td>
+          <td style="border: 1px solid black">10</td>
+          <td style="border: 1px solid black">221</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black; width: 60%">
+            Black Bull 10 Year Old Retro Edition BLACK BULL null 10YO 18/34850%
+            6x700ml
+          </td>
+          <td style="border: 1px solid black">10</td>
+          <td style="border: 1px solid black">221</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black; width: 60%">
+            Black Bull 10 Year Old Retro Edition BLACK BULL null 10YO 18/34850%
+            6x700ml
+          </td>
+          <td style="border: 1px solid black">10</td>
+          <td style="border: 1px solid black">221</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black; width: 60%">
+            Black Bull 10 Year Old Retro Edition BLACK BULL null 10YO 18/34850%
+            6x700ml
+          </td>
+          <td style="border: 1px solid black">10</td>
+          <td style="border: 1px solid black">221</td>
+        </tr>
+        <tr>
+          <td style="border: 1px solid black; width: 60%">
+            Black Bull 10 Year Old Retro Edition BLACK BULL null 10YO 18/34850%
+            6x700ml
+          </td>
+          <td style="border: 1px solid black">10</td>
+          <td style="border: 1px solid black">221</td>
+        </tr>
+      </tbody>
+    </table>
+    <table
+      class="invoice Address"
+      style="
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+      "
+    >
+      <tr>
+        <td style="border: 1px solid black">
+          Invoicing Address <br />add1 <br />add2 <br />Bangalore Rural
+          <br />Karnataka <br />560076
+        </td>
+        <td style="border: 1px solid black">
+          Invoicing Address <br />add1 <br />add2 <br />Bangalore Rural
+          <br />Karnataka <br />560076
+        </td>
+      </tr>
+    </table>
+    <table
+      class="one row"
+      style="width: 100%; text-align: left; border-collapse: collapse"
+    >
+      <tr>
+        <td style="border: 1px solid black; font-weight: bold">
+          To be Completed by Customer
+        </td>
+      </tr>
+    </table>
+    <table
+      class="detail"
+      style="width: 100%; text-align: left; border-collapse: collapse"
+    >
+      <tr>
+        <td style="border: 1px solid black; width: 25%">Customer PO No.</td>
+        <td style="border: 1px solid black; width: 25%">123</td>
+        <td style="border: 1px solid black; width: 25%">
+          Excise Registration No<br />
+          Of Place of Delivery
+        </td>
+        <td style="border: 1px solid black; width: 25%"></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black">Warehouse No:</td>
+        <td style="border: 1px solid black"></td>
+        <td style="border: 1px solid black">EORI No:</td>
+        <td style="border: 1px solid black"></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black">Vat No:</td>
+        <td style="border: 1px solid black">4343</td>
+        <td style="border: 1px solid black"></td>
+        <td style="border: 1px solid black"></td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black">Contact Name:</td>
+        <td style="border: 1px solid black">deyan</td>
+        <td style="border: 1px solid black">Contact Email:</td>
+        <td style="border: 1px solid black">dngupta14@gmail.com</td>
+      </tr>
+    </table>
+    <table
+      style="
+        margin-top: 10px;
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+      "
+    >
+      <tr>
+        <td style="border: 1px solid black">Name of Transporter: TBD</td>
+        <td style="border: 1px solid black">
+          Email Contact of Transporter: TBD
+        </td>
+      </tr>
+    </table>
+    <table
+      class="detail"
+      style="width: 100%; text-align: left; border-collapse: collapse"
+    >
+      <tr style="height: 70px">
+        <td style="border: 1px solid black; width: 25%">
+          Address Of Transporter:
+        </td>
+        <td style="border: 1px solid black"></td>
+      </tr>
+    </table>
+    <table
+      class="detail"
+      style="
+        margin-top: 50px;
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+      "
+    >
+      <tr>
+        <td>
+          For and on behalf of <br />
+          Duncan Taylor Scotch Whishky Ltd:
+        </td>
+        <td>For and on behalf of</td>
+      </tr>
+      <tr>
+        <td><img alt="duncantaylor sign" /></td>
+        <td><span style="color: white">**signature_1**/</span></td>
+      </tr>
+    </table>
+    <div class="page-break" style="margin-top: 5px"></div>
+    <table
+      style="
+        float: left;
+        width: 100%;
+        table-layout: fixed;
+        border: 1px solid #ccc;
+        margin-top: 5px;
+      "
+    >
+      <tr>
+        <td style="vertical-align: top">
+          <table
+            style="
+              float: left;
+              margin-top: 5px;
+              text-align: center;
+              border-collapse: collapse;
+            "
+          >
+            <tr style="font-size: 8px; font-weight: bold">
+              <td></td>
+              <td>TERMS AND CONDITIONS OF SALE</td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: bold; text-align: left">
+              <td style="width: 10px">1.</td>
+              <td>Interpretation</td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">1.1</td>
+              <td>
+                The following words and phrases shall, unless the context
+                otherwise requires, have the following meanings:
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <table
+                  style="
+                    margin-top: 10px;
+                    text-align: left;
+                    border-collapse: collapse;
+                  "
+                >
+                  <tr style="font-size: 8px">
+                    <td style="width: 20%; font-weight: bold; text-align: left">
+                      “Buyer”
+                    </td>
+                    <td>
+                      means the person who accepts the Seller’s Written
+                      quotation for the sale of the Goods or whose Written order
+                      for the Goods is accepted by the Seller;
+                    </td>
+                  </tr>
+                  <tr style="font-size: 8px">
+                    <td style="width: 20%; font-weight: bold; text-align: left">
+                      “Goods”
+                    </td>
+                    <td>
+                      means the goods (including any instalment of the goods or
+                      any parts for them) which the Seller is to supply in
+                      accordance with these Terms, and for the avoidance of
+                      doubt shall include the Casks;
+                    </td>
+                  </tr>
+                  <tr style="font-size: 8px">
+                    <td style="width: 20%; font-weight: bold; text-align: left">
+                      “Seller”
+                    </td>
+                    <td>
+                      means Duncan Taylor Scotch Whisky Limited, a company
+                      incorporated under the Companies Acts (company number:
+                      SC036622) and having its registered office at 34 Albyn
+                      Place, Aberdeen, AB10 1FW, Scotland;
+                    </td>
+                  </tr>
+                  <tr style="font-size: 8px">
+                    <td style="width: 20%; font-weight: bold; text-align: left">
+                      “Contract”
+                    </td>
+                    <td>
+                      means the contract for the sale and purchase of the Goods;
+                    </td>
+                  </tr>
+                  <tr style="font-size: 8px">
+                    <td style="width: 20%; font-weight: bold; text-align: left">
+                      “Incoterms”
+                    </td>
+                    <td>
+                      means the international rules for the interpretation of
+                      trade terms of the International Chamber of Commerce as in
+                      force at the date when the Contract is made;
+                    </td>
+                  </tr>
+                  <tr style="font-size: 8px">
+                    <td style="width: 20%; font-weight: bold; text-align: left">
+                      “Terms”
+                    </td>
+                    <td>
+                      means the standard terms of sale set out in this document
+                      and (unless the context otherwise requires) includes any
+                      special terms agreed in Writing between the Buyer and the
+                      Seller;
+                    </td>
+                  </tr>
+                  <tr style="font-size: 8px">
+                    <td style="width: 20%; font-weight: bold; text-align: left">
+                      “Writing”
+                    </td>
+                    <td>
+                      and any similar expression, includes facsimile
+                      transmission and comparable means of communication, but
+                      not electronic mail unless agreed between the parties.
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">1.1</td>
+              <td>
+                A reference in these Terms to a provision of a statute shall be
+                construed as a reference to that provision as amended,
+                re-enacted or extended at the relevant time.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">1.2</td>
+              <td>
+                The headings in these Terms are for convenience only and shall
+                not affect their interpretation.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: bold; text-align: left">
+              <td style="width: 10px">2</td>
+              <td>Basis of the sale</td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">2.1</td>
+              <td>
+                The Seller shall sell and the Buyer shall purchase the Goods in
+                accordance with the Seller’s Written quotation (if accepted by
+                the Buyer), or the Buyer’s Written order (if accepted by the
+                Seller), subject in either case to these Terms, which shall
+                govern the Contract to the exclusion of any other terms subject
+                to which any such quotation is accepted or purported to be
+                accepted, or any such order is made or purported to be made, by
+                the Buyer.
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td style="vertical-align: top">
+          <table
+            style="
+              float: left;
+              margin-top: 5px;
+              text-align: center;
+              border-collapse: collapse;
+            "
+          >
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">2.2</td>
+              <td>
+                The Seller may, in its sole discretion, provide prospective
+                Buyers with samples of the Products.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">2.3</td>
+              <td>
+                No variation to these Terms shall be binding unless agreed in
+                Writing between the authorised representatives of the Buyer and
+                the Seller.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">2.4</td>
+              <td>
+                The Seller’s employees or agents are not authorised to make any
+                representations concerning the Goods unless confirmed by the
+                Seller in Writing. In entering into the Contract the Buyer
+                acknowledges that it does not rely on any such representations
+                which are not so confirmed, but nothing in these Terms affects
+                the liability of either party for fraudulent misrepresentation.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">2.5</td>
+              <td>
+                Any advice or recommendation given by the Seller or its
+                employees or agents to the Buyer or its employees or agents as
+                to the storage, application or use of the Goods which is not
+                confirmed in Writing by the Seller is followed or acted upon
+                entirely at the Buyer’s own risk, and accordingly the Seller
+                shall not be liable for any such advice or recommendation which
+                is not so confirmed.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">2.6</td>
+              <td>
+                Any typographical, clerical or other error or omission in any
+                sales literature, quotation, price list, acceptance of offer,
+                invoice or other document or information issued by the Seller
+                shall be subject to correction without any liability on the part
+                of the Seller.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: bold; text-align: left">
+              <td style="width: 10px">3</td>
+              <td>Orders and specifications</td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">3.1</td>
+              <td>
+                No order submitted by the Buyer shall be deemed to be accepted
+                by the Seller unless and until confirmed in Writing by the
+                Seller’s authorised representative.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">3.2</td>
+              <td>
+                The Buyer shall be responsible to the Seller for ensuring the
+                accuracy of the terms of any order (including any applicable
+                specification) submitted by the Buyer, and for giving the Seller
+                any necessary information relating to the Goods within a
+                sufficient time to enable the Seller to perform the Contract in
+                accordance with its terms, subject to the Seller taking all
+                reasonable efforts to mitigate such costs and losses.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">3.3</td>
+              <td>
+                The quantity, quality and description of the Goods and any
+                specification for them shall be as set out in the Seller’s
+                quotation (if accepted by the Buyer) or the Buyer’s order (if
+                accepted by the Seller).
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">3.4</td>
+              <td>
+                If the Goods are to be manufactured or any process is to be
+                applied to the Goods by the Seller in accordance with a
+                specification submitted by the Buyer, the Buyer shall indemnify
+                the Seller against all loss, damages, costs and expenses awarded
+                against or incurred by the Seller in connection with, or paid or
+                agreed to be paid by the Seller in settlement of, any claim for
+                infringement of any patent, copyright, design, trade mark or
+                other industrial or intellectual property rights of any other
+                person which results from the Seller’s use of the Buyer’s
+                specification.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">3.5</td>
+              <td>
+                The Seller reserves the right to make any changes in the
+                specification of the Goods which are required to conform with
+                any applicable statutory or E.U. requirements or, where the
+                Goods are to be supplied to the Seller’s specification, which do
+                not materially affect their quality or performance.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">3.6</td>
+              <td>
+                Where the Seller brokers casks of whisky (“Casks”) to a Buyer,
+                the Casks shall under no circumstances be (i) sold on, or
+                otherwise transferred to another party without the Seller’s
+                written consent, or (ii) bottled by anyone other than the
+                Seller.
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td style="vertical-align: top">
+          <table
+            style="
+              float: left;
+              margin-top: 5px;
+              text-align: center;
+              border-collapse: collapse;
+            "
+          >
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">3.7</td>
+              <td>
+                No order which has been accepted by the Seller may be cancelled
+                by the Buyer except with the agreement in Writing of the Seller
+                and on terms that the Buyer shall indemnify the Seller in full
+                against all loss (including loss of profit), costs (including
+                the cost of all labour and materials used), damages, charges and
+                expenses incurred by the Seller as a result of cancellation,
+                subject to the Seller taking all reasonable efforts to mitigate
+                such costs and losses.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: bold; text-align: left">
+              <td style="width: 10px">4</td>
+              <td>Price of the goods</td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">4.1</td>
+              <td>
+                The price of the Goods shall be the Seller’s quoted price or,
+                where no price has been quoted (or a quoted price is no longer
+                valid), the price listed in the Seller’s published price list
+                current at the date of acceptance of the order. Where the Goods
+                are supplied for export from the United Kingdom, the Seller’s
+                published export price list shall apply. All prices quoted are
+                valid for 30 days only or until earlier acceptance by the Buyer,
+                after which time they may be altered by the Seller without
+                giving notice to the Buyer.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">4.2</td>
+              <td>
+                The Seller reserves the right, by giving Written notice to the
+                Buyer at any time before delivery, to increase the price of the
+                Goods to reflect any increase in the cost to the Seller which is
+                due to any factor beyond the control of the Seller (such as,
+                without limitation, any foreign exchange fluctuation, currency
+                regulation, alteration of duties, significant increase in the
+                costs of labour, materials or other costs of manufacture), any
+                change in delivery dates, quantities or specifications for the
+                Goods which is requested by the Buyer, or any delay caused by
+                any instructions of the Buyer or failure of the Buyer to give
+                the Seller adequate information or instructions.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">4.3</td>
+              <td>
+                Except as otherwise stated in the Seller’s Written quotation or
+                in any price list of the Seller and unless otherwise agreed in
+                Writing between the Buyer and the Seller, all prices are given
+                by the Seller on an FCA (Free Carrier) incoterm basis, As such
+                the FCA rule requires the seller to deliver the goods to the
+                buyer or its carrier either at the seller’s premises (normal)
+                loaded onto the collecting vehicle or delivered (only by prior
+                agreement) to another premises (typically a forwarder’s
+                warehouse, airport or container terminal) not unloaded from the
+                seller’s vehicle. Where the Seller, by prior agreement, agrees
+                to deliver the Goods to a location other than to the collecting
+                vehicle at the Seller’s premises, the Buyer shall be liable to
+                pay the quoted Seller’s charges for transport, packaging and
+                insurance. In normal situations it is the responsibility of the
+                Buyer to ensure their freight forwarder, or agent, has a
+                movement guarantee in place prior to loading the collecting
+                vehicle.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">4.4</td>
+              <td>
+                The price is exclusive of any warehouse rents or charges arising
+                at any time after the Seller has notified the Buyer that the
+                Goods are ready for collection, which the Buyer shall be
+                additionally liable to pay, or reimburse, to the Seller.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">4.5</td>
+              <td>
+                Where Casks brokered pursuant to clause 3.6 require to be
+                bottled by the Seller, the Buyer shall be additionally liable to
+                pay to the Seller (i) any accrued warehouse rents or charges,
+                and (ii) any costs associated with the bottling of the Casks, in
+                accordance with the Seller’s bottling price list at the time of
+                bottling.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">4.6</td>
+              <td>
+                The price is exclusive of any applicable value added tax, which
+                the Buyer shall be additionally liable to pay to theSeller.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">4.5</td>
+              <td>
+                Unless by special Contract agreement, the cost of pallets and
+                returnable containers will be charged to the Buyer in addition
+                to the price of the Goods, but full credit will be given to the
+                Buyer provided they are returned undamaged to the Seller before
+                the due payment date.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <div class="page-break" style="margin-top: 5px"></div>
+    <table
+      style="
+        float: left;
+        width: 100%;
+        table-layout: fixed;
+        border: 1px solid #ccc;
+        margin-top: 5px;
+      "
+    >
+      <tr>
+        <td style="vertical-align: top">
+          <table
+            style="
+              float: left;
+              margin-top: 5px;
+              text-align: center;
+              border-collapse: collapse;
+            "
+          >
+            <tr style="font-size: 8px; font-weight: bold; text-align: left">
+              <td style="width: 10px">5.</td>
+              <td>Terms of payment</td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">5.1</td>
+              <td>
+                Subject to any special terms agreed in Writing between the Buyer
+                and the Seller, the Seller may invoice the Buyer for the price
+                of the Goods on or at any time after delivery of the Goods,
+                unless the Goods are to be collected by the Buyer or the Buyer
+                wrongfully fails to take delivery of the Goods, in which event
+                the Seller shall be entitled to invoice the Buyer for the price
+                at any time after the Seller has notified the Buyer that the
+                Goods are ready for collection or (as the case may be) the
+                Seller has tendered delivery of the Goods.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">5.2</td>
+              <td>
+                Any samples of Goods provided to prospective Buyers will be paid
+                for in accordance with the provisions of clause 5.1 above. If
+                any prospective Buyer that has been delivered samples of the
+                Goods subsequently places an order with the Seller for Goods,
+                the cost of those samples will be refunded by the Seller to the
+                Buyer if previously agreed.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">5.3</td>
+              <td>
+                Provided no previous invoice is overdue, the Buyer shall be
+                entitled to a prompt payment discount of 2.5 per cent of the
+                price of the Goods (excluding any charge for transport,
+                packaging or insurance) for payment in advance of receipt of
+                goods or on a proforma basis.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">5.4</td>
+              <td>
+                The Buyer shall pay the price of the Goods (less any discount to
+                which the Buyer is entitled, but without any other deduction)
+                within agreed payment terms as of the date of the Seller’s
+                invoice, and the Seller shall be entitled to recover the price,
+                notwithstanding that delivery may not have taken place and the
+                property of the Goods has not passed to the Buyer. The time of
+                payment of the price shall be of the essence of the Contract.
+                Receipts for payment will be issued only upon request./td>
+              </td>
+            </tr>
+
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">5.5</td>
+              <td>
+                If the Buyer fails to make any payment on the due date then,
+                without limiting any other right or remedy available to the
+                Seller, the Seller may:
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px"></td>
+              <td>
+                <table
+                  style="
+                    float: left;
+                    text-align: left;
+                    border-collapse: collapse;
+                  "
+                >
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">5.5.1</td>
+                    <td>
+                      cancel the contract or suspend any further deliveries to
+                      the Buyer;
+                    </td>
+                  </tr>
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">5.5.2</td>
+                    <td>
+                      appropriate any payment made by the Buyer to such of the
+                      Goods (or the goods suppliedunder any other contract
+                      between the Buyer and the Seller) as the Seller may think
+                      fit (notwithstanding any purported appropriation by the
+                      Buyer); and
+                    </td>
+                  </tr>
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">5.5.3</td>
+                    <td>
+                      charge the Buyer interest (both before and after any
+                      judgment) on the amount unpaid, at the rate of 10 per cent
+                      per annum above the base rate of the Bank of Scotland from
+                      time to time, until payment in full is made (a part of a
+                      month being treated as a full month for the purpose of
+                      calculating interest).
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: bold; text-align: left">
+              <td style="width: 10px">6</td>
+              <td>Delivery</td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">6.1</td>
+              <td>
+                Delivery of the Goods shall be made by the Buyer collecting the
+                Goods at the Seller’s premises at any time after the Seller has
+                notified the Buyer that the Goods are ready for collection or,
+                if some other place for delivery is agreed by the Seller, by the
+                Seller delivering the Goods to that place.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">6.2</td>
+              <td>
+                Any dates quoted for delivery of the Goods are approximate only
+                and the Seller shall not be liable for any delay in delivery of
+                the Goods however caused. Time for delivery shall not be of the
+                essence of the Contract unless previously agreed by the Seller
+                in Writing. The Goods may be delivered by the Seller in advance
+                of the quoted delivery date on giving reasonable notice to the
+                Buyer.
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td style="vertical-align: top">
+          <table
+            style="
+              float: left;
+              margin-top: 5px;
+              text-align: center;
+              border-collapse: collapse;
+            "
+          >
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">6.3</td>
+              <td>
+                Where delivery of the Goods is to be made by the Seller in bulk,
+                the Seller reserves the right to deliver up to 2.5 per cent more
+                or 2.5 per cent less than the quantity ordered without any
+                adjustment in the price, and the quantity so delivered shall be
+                deemed to be the quantity ordered.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">6.4</td>
+              <td>
+                Where the Goods are to be delivered in instalments, each
+                delivery shall constitute a separate contract and failure by the
+                Seller to deliver any one or more of the instalments in
+                accordance with these Terms or any claim by the Buyer in respect
+                of any one or more instalments shall not entitle the Buyer to
+                treat the Contract as a whole as repudiated.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">6.5</td>
+              <td>
+                If the Buyer fails to take delivery of the Goods or fails to
+                give the Seller adequate delivery instructions at the time
+                stated for delivery (otherwise than by reason of any cause
+                beyond the Buyer’s reasonable control or by reason of the
+                Seller’s fault) then, without limiting any other right or remedy
+                available to the Seller, the Seller may.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px"></td>
+              <td>
+                <table
+                  style="
+                    float: left;
+                    text-align: left;
+                    border-collapse: collapse;
+                  "
+                >
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">6.5.1</td>
+                    <td>
+                      store the Goods until actual delivery and charge the Buyer
+                      for the reasonable costs (including insurance) of storage;
+                      or
+                    </td>
+                  </tr>
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">6.5.2</td>
+                    <td>
+                      sell the Goods at the best price readily obtainable and
+                      (after deducting all reasonable storage and selling
+                      expenses) account to the Buyer for the excess over the
+                      price under the Contract or charge the Buyer for any
+                      shortfall below the price under the Contract.
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: bold; text-align: left">
+              <td style="width: 10px">7</td>
+              <td>Risk and property</td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">7.1</td>
+              <td>
+                Risk of damage to or loss of the Goods shall pass to the Buyer.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">7.2</td>
+              <td>
+                Notwithstanding delivery and the passing of risk in the Goods,
+                or any other provision of these Terms, the property in the Goods
+                shall not pass to the Buyer until the Seller has received in
+                cash or cleared funds payment in full of the price of the Goods
+                and all other goods agreed to be sold by the Seller to the Buyer
+                for which payment is then due.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">7.3</td>
+              <td>
+                Until such time as the property in the Goods passes to the
+                Buyer, the Buyer shall hold the Goods as the Seller’s fiduciary
+                agent and trustee, and shall keep the Goods separate from those
+                of the Buyer and third parties and properly stored, protected
+                and insured and identified as the Seller’s property, but the
+                Buyer may resell or use the Goods in the ordinary course of its
+                business.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">7.4</td>
+              <td>
+                Until such time as the property in the Goods passes to the Buyer
+                (and provided the Goods are still in existence and have not been
+                resold), the Seller may at any time require the Buyer to deliver
+                up the Goods to the Seller and, if the Buyer fails to do so
+                forthwith, enter on any premises of the Buyer or any third party
+                where the Goods are stored and repossess the Goods, after due
+                notice has been given to Buyer
+              </td>
+            </tr>
+          </table>
+        </td>
+
+        <td style="vertical-align: top">
+          <table
+            style="
+              float: left;
+              margin-top: 5px;
+              text-align: center;
+              border-collapse: collapse;
+              vertical-align: top;
+            "
+          >
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">7.5</td>
+              <td>
+                The Buyer shall not be entitled to pledge or in any way charge
+                by way of security for any ndebtedness any of the Goods which
+                remain the property of the Seller, but if the Buyer does so all
+                moneys owing by the Buyer to the Seller shall (without limiting
+                any other right or remedy of the Seller) forthwith become due
+                and payable.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: bold; text-align: left">
+              <td style="width: 10px">8</td>
+              <td>Warranties and liability</td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">8.1</td>
+              <td>
+                Except where the Goods are sold to a person dealing as a
+                consumer (within the meaning of theUnfair Contract Terms Act
+                1977), all warranties, conditions or other terms implied by
+                statute or common law are excluded to the fullest extent
+                permitted by law.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">8.2</td>
+              <td>
+                Where the Goods are sold under a consumer transaction (as
+                defined by the Consumer Transactions (Restrictions on
+                Statements) Order 1976) the statutory rights of the Buyer are
+                not affected by these Terms.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">8.3</td>
+              <td>
+                A claim by the Buyer which is based on any defect in the
+                quality, quantity or condition of the Goods or their failure to
+                correspond with specification shall (whether or not delivery is
+                refused by the Buyer) be notified to the Seller within seven
+                days from the date on which the risk in the Goods passes to the
+                Buyer or (where the defect or failure was not apparent on
+                reasonable inspection) within a reasonable time after discovery
+                of the defect or failure. If delivery is not refused, and the
+                Buyer does not notify the Seller accordingly, the Buyer shall
+                not be entitled to reject the Goods and the Seller shall have no
+                liability for such defect or failure, and the Buyer shall be
+                bound to pay the price as if the Goods had been delivered in
+                accordance with the Contract. For the avoidance of doubt, the
+                Seller shall have no liability for any leakage or evaporation of
+                whatever nature of the Goods if it has not been notified to the
+                Seller within seven days from the date on which the risk in the
+                Goods passes to the Buyer.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">8.4</td>
+              <td>
+                Where a valid claim in respect of any of the Goods which is
+                based on a defect in the quality or condition of the Goods or
+                their failure to meet specification is notified to the Seller in
+                accordance with these Terms, the Seller may replace the Goods
+                (or the part in question) free of charge or, at the Seller’s
+                sole discretion, refund to the Buyer the price of the Goods (or
+                a proportionate part of the price), in which case the Seller
+                shall have no further liability to the Buyer.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">8.5</td>
+              <td>
+                Except in respect of death or personal injury caused by the
+                Seller’s negligence, or liability for defective products under
+                the Consumer Protection Act 1987, the Seller shall not be liable
+                to the Buyer by reason of any representation (unless
+                fraudulent), or any implied warranty, condition or other term,
+                or any duty at common law, or under the express terms of the
+                Contract, for loss of profit or for any indirect, special or
+                consequential loss or damage, costs, expenses or other claims
+                for compensation whatsoever (whether caused by the negligence of
+                the Seller, its employees or agents or otherwise) which arise
+                out of or in connection with the supply of the Goods (including
+                any delay in supplying or any failure to supply the Goods in
+                accordance with the Contract or at all) or their use or resale
+                by the Buyer, and the entire liability of the Seller under or in
+                connection with the Contract shall not exceed the price of the
+                Goods, except as expressly provided in these Terms.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <div class="page-break" style="margin-top: 5px"></div>
+    <table
+      style="
+        float: left;
+        width: 100%;
+        table-layout: fixed;
+        border: 1px solid #ccc;
+        margin-top: 5px;
+      "
+    >
+      <tr>
+        <td style="vertical-align: top">
+          <table
+            style="
+              float: left;
+              margin-top: 5px;
+              text-align: center;
+              border-collapse: collapse;
+              vertical-align: top;
+            "
+          >
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">8.6</td>
+              <td>
+                The Seller shall not be liable to the Buyer or be deemed to be
+                in breach of the Contract by reason of any delay in performing,
+                or any failure to perform, any of the Seller’s obligations in
+                relation to the Goods, if the delay or failure was due to any
+                cause beyond the Seller’s reasonable control. Without limiting
+                the foregoing, the following shall be regarded as causes beyond
+                the Seller’s reasonable control:
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px"></td>
+              <td>
+                <table
+                  style="
+                    float: left;
+                    text-align: left;
+                    border-collapse: collapse;
+                  "
+                >
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">8.6.1</td>
+                    <td>
+                      Act of God, explosion, flood, tempest, fire or accident;
+                    </td>
+                  </tr>
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">8.6.2</td>
+                    <td>
+                      war or threat of war, sabotage, insurrection, civil
+                      disturbance or requisition;
+                    </td>
+                  </tr>
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">8.6.3</td>
+                    <td>
+                      acts, restrictions, regulations, bye-laws, prohibitions or
+                      measures of any kind on the part of any governmental,
+                      parliamentary or local authority;
+                    </td>
+                  </tr>
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">8.6.4</td>
+                    <td>
+                      strikes, lock-outs or other industrial actions or trade
+                      disputes (whether involving employees of the Seller or of
+                      a third party);
+                    </td>
+                  </tr>
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">8.6.5</td>
+                    <td>
+                      strikes, lock-outs or other industrial actions or trade
+                      disputes (whether involving employees of the Seller or of
+                      a third party);
+                    </td>
+                  </tr>
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">8.6.6</td>
+                    <td>
+                      difficulties in obtaining raw materials, labour, fuel,
+                      parts or machinery;
+                    </td>
+                  </tr>
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">8.6.7</td>
+                    <td>Power failure or breakdown in machinery;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: bold; text-align: left">
+              <td style="width: 10px">9</td>
+              <td>Insolvency of buyer</td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">9.1</td>
+              <td>This clause 9 applies if:</td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px"></td>
+              <td>
+                <table
+                  style="
+                    float: left;
+                    text-align: left;
+                    border-collapse: collapse;
+                  "
+                >
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">9.1.1</td>
+                    <td>
+                      the Buyer makes a voluntary arrangement with its creditors
+                      or (being an individual or firm) becomes bankrupt or
+                      (being a company) becomes subject to an administration
+                      order or goes into liquidation (otherwise than for the
+                      purposes of amalgamation or reconstruction); or
+                    </td>
+                  </tr>
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">9.1.2</td>
+                    <td>
+                      an encumbrancer takes possession, or a receiver is
+                      appointed, of any of the property or assets of the Buyer;
+                      or
+                    </td>
+                  </tr>
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">9.1.3</td>
+                    <td>
+                      the Buyer ceases, or threatens to cease, to carry on
+                      business; or
+                    </td>
+                  </tr>
+                  <tr
+                    style="
+                      font-size: 8px;
+                      font-weight: normal;
+                      text-align: left;
+                    "
+                  >
+                    <td style="width: 10px">9.1.4</td>
+                    <td>
+                      the Seller reasonably apprehends that any of the events
+                      mentioned above is about to occur in relation to the Buyer
+                      and notifies the Buyer accordingly
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">9.1</td>
+              <td>
+                If this clause applies then, without limiting any other right or
+                remedy available to the Seller, the Seller may cancel the
+                Contract or suspend any further deliveries under the Contract
+                without any liability to the Buyer, and if the Goods have been
+                delivered but not paid for the price shall become immediately
+                due and payable notwithstanding any previous agreement or
+                arrangement to the contrary.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: bold; text-align: left">
+              <td style="width: 10px">10</td>
+              <td>Export terms</td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td style="width: 10px">10.1</td>
+              <td>
+                Unless the context otherwise requires, any term or expression
+                which is defined in or given a particular meaning by the
+                provisions of Incoterms shall have the same meaning in these
+                Terms, but if there is any conflict between the provisions of
+                Incoterms and these Terms, the latter shall prevail.
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td style="vertical-align: top">
+          <table
+            style="
+              float: left;
+              margin-top: 5px;
+              text-align: center;
+              border-collapse: collapse;
+              vertical-align: top;
+            "
+          >
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td>10.2</td>
+              <td>
+                Where the Goods are supplied for export from the United Kingdom,
+                the provisions of this clause 10 shall (subject to any special
+                terms agreed in Writing between the Buyer and the Seller) apply
+                notwithstanding any other provision of these Terms.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td>10.3</td>
+              <td>
+                The Buyer shall be responsible for complying with any
+                legislation or regulations governing the exportation of the
+                Goods from the United Kingdom and importation of the Goods into
+                the country of destination and for the payment of any duties on
+                them, and for all applicable registrations with HM Revenue &
+                Customs.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td>10.4</td>
+              <td>
+                The Buyer shall be responsible for arranging for testing and
+                inspection of the Goods at the Seller’s premises before
+                shipment. The Seller shall have no liability for any claim in
+                respect of any defect in the Goods which would be apparent on
+                inspection and which is made after shipment, or in respect of
+                any damage during transit.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td>10.5</td>
+              <td>
+                Payment of all amounts due to the Seller shall be made by
+                electronic bank transfer by the Buyer in favour of the Seller
+                and confirmed by a bank acceptable to the Seller. The transfer
+                will be deemed complete when the amounts are lodged in the
+                Seller’s bank account. Where proforma invoice terms are used no
+                preparation or movement of Goods will take place until all due
+                amounts are deposited in Seller’s account.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td>10.6</td>
+              <td>
+                The Buyer shall not offer the Goods for resale in any country
+                unless notified by the Seller to the Buyer at or before the time
+                the Buyer’s order is placed, or sell the Goods to any person if
+                the Buyer knows or has reason to believe that that person
+                intends to resell the Goods in any such country.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: bold; text-align: left">
+              <td>11</td>
+              <td>General</td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td>11.1</td>
+              <td>
+                The Seller is a member of a group of companies and accordingly
+                the Seller may perform any of its obligations or exercise any of
+                its rights under the Contract by itself or through any
+                othermember of its group, provided that any act or omission of
+                any such other member shall be deemed to be the act or omission
+                of the Seller.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td>11.2</td>
+              <td>
+                A notice required or permitted to be given by either party to
+                the other under these Terms shall be in Writing addressed to
+                that other party at its registered office or principal place of
+                business or such other address as may at the relevant time have
+                been notified pursuant to this provision to the party giving the
+                notice.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td>11.3</td>
+              <td>
+                No waiver by the Seller of any breach of the Contract by the
+                Buyer shall be considered as a waiver of any subsequent breach
+                of the same or any other provision.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td>11.4</td>
+              <td>
+                If any provision of the Contract is held by a court or other
+                competent authority to be invalid or unenforceable in whole or
+                in part the validity of the other provisions of the Contract and
+                the remainder of the provision in question shall not be
+                affected.
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td>11.5</td>
+              <td>
+                The Contract shall be governed by the laws of Scotland, and the
+                Buyer agrees to submit to the non-exclusive jurisdiction of the
+                Scottish courts
+              </td>
+            </tr>
+            <tr style="font-size: 8px; font-weight: normal; text-align: left">
+              <td>11.6</td>
+              <td>
+                The Seller has developed guidelines, for the processing of
+                personal data to meet the requirements of current GDPR
+                legislation (General Data Protection Regulation). Personal data
+                is defined by the General Data Protection Regulation as ‘any
+                information relating to an identifiable person who can be
+                directly or indirectly identified in particular by reference to
+                an identifier’.Information about the Buyer will only be kept,
+                with the Buyer’s given consent, for the purpose of processing
+                the Buyer’s order and managing the Buyer’s account. Sharing of
+                any Buyer information by the Seller will only take place with
+                the Buyer’s consent.
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td style="vertical-align: top">
+          <table
+            style="
+              float: left;
+              margin-top: 5px;
+              text-align: center;
+              border-collapse: collapse;
+              vertical-align: top;
+            "
+          >
+            <tr>
+              <td></td>
+              <td>
+                <table
+                  style="
+                    float: left;
+                    margin-top: 30px;
+                    text-align: center;
+                    border-collapse: collapse;
+                  "
+                >
+                  <tr
+                    style="font-size: 10px; font-weight: bold; text-align: left"
+                  >
+                    <td>Order No: TBD</td>
+                  </tr>
+                  <tr
+                    style="
+                      height: 50px;
+                      font-size: 10px;
+                      font-weight: bold;
+                      text-align: left;
+                    "
+                  >
+                    <td>Order Date: TBD</td>
+                  </tr>
+                  <tr
+                    style="font-size: 10px; font-weight: bold; text-align: left"
+                  >
+                    <td>
+                      We hereby accept the terms of conditions of sale of Duncan
+                      Taylor Scotch Whisky Ltd in relation to our above order
+                    </td>
+                  </tr>
+                  <tr
+                    style="
+                      height: 60px;
+                      font-size: 10px;
+                      font-weight: bold;
+                      text-align: left;
+                    "
+                  >
+                    <td>Electronic Signature:</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span style="color: white">**signature_1**/</span>
+                    </td>
+                  </tr>
+                  <tr
+                    style="
+                      height: 40px;
+                      font-size: 10px;
+                      font-weight: bold;
+                      text-align: left;
+                    "
+                  >
+                    <td>Name: TBD</td>
+                  </tr>
+                  <tr
+                    style="
+                      height: 40px;
+                      font-size: 10px;
+                      font-weight: bold;
+                      text-align: left;
+                    "
+                  >
+                    <td>Position: TBD</td>
+                  </tr>
+                  <tr
+                    style="
+                      height: 40px;
+                      font-size: 10px;
+                      font-weight: bold;
+                      text-align: left;
+                    "
+                  >
+                    <td>Company: TBD</td>
+                  </tr>
+                  <tr
+                    style="
+                      height: 40px;
+                      font-size: 10px;
+                      font-weight: bold;
+                      text-align: left;
+                    "
+                  >
+                    <td>Date: TBD</td>
+                  </tr>
+                  <tr
+                    style="
+                      height: 40px;
+                      font-size: 10px;
+                      font-weight: bold;
+                      text-align: left;
+                    "
+                  >
+                    <td>
+                      Send signed pdf by email to:
+                      <a href="mailto:orders@duncantaylor.com"
+                        >orders@duncantaylor.com</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

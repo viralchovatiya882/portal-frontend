@@ -1,0 +1,34 @@
+.ant-btn-primary,
+.btn-primary,
+.btn-primary.focus,
+.btn-primary:focus,
+.ant-btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    background: #43425d;
+    border-color: #43425d;
+    // box-shadow: 0 0 0 0.2rem #3b3a
+
+}
+
+.btn-primary:hover,
+.ant-btn-primary:hover {
+    background: #3b3a52;
+    border-color: #3b3a52;
+}
+
+.view_document {
+    .document-view {
+        height: 350px;
+        padding-right: 20px;
+    }
+}
+
+.view__proforma{
+    .document-view {
+        height: auto;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+}

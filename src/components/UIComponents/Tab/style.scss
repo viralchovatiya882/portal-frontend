@@ -1,0 +1,23 @@
+.tab-container {
+  display: flex;
+  @mixin tab($color) {
+    height: 35px;
+    width: 100px;
+    border: 1px solid #eee;
+    padding: 2px 10px;
+    font-size: 18px;
+    text-align: center;
+    margin-right: 10px;
+    background-color: $color;
+  }
+  .tabs-active {
+    @include tab(rgb(62, 88, 161));
+    color: #fff;
+  }
+  .tabs-default {
+    @include tab(white);
+  }
+  a {
+    margin-right: 10px;
+  }
+}

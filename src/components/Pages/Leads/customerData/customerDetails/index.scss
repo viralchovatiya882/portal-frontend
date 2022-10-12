@@ -1,0 +1,184 @@
+.customer_details_list {
+
+    .ant-divider-horizontal.ant-divider-with-text {
+        margin: 5px 0;
+    }
+
+    .head_officer_action__status {
+        float: left;
+        width: 100%;
+
+        .full-fillment-status-select {
+            min-width: 160px;
+        }
+
+        .ant-select-selector,
+        .ant-input {
+            border: none !important;
+            border-bottom: 1px solid #b1b1b1 !important;
+            padding-left: 0px !important;
+        }
+
+        .ant-form-inline {
+            flex-wrap: inherit;
+        }
+
+        .ant-select-focused .ant-select-selector,
+        .ant-select-selector:focus,
+        .ant-input:focus,
+        .ant-select-selector:active,
+        .ant-input-focused,
+        .ant-select-open .ant-select-selector {
+            border-color: #d9d9d9 !important;
+            box-shadow: none !important;
+        }
+
+        .ant-select-single .ant-select-selector .ant-select-selection-search {
+            left: 0;
+        }
+    }
+
+    .common-border {
+        border-radius: 10px;
+        min-height: 100px;
+        float: left;
+        width: 100%;
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+
+
+    p {
+        float: left;
+        width: 90%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .text-overflow {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .ant-form-item textarea.ant-input[disabled] {
+        color: #000;
+        min-height: 80px;
+    }
+
+}
+
+.lead__message_info {
+    max-height: 400px;
+    min-height: 100px;
+    overflow: auto;
+    text-align: justify;
+    padding: 0 20px 0 0px;
+}
+
+.lead__uploaded_list {
+    border: 1px solid #ccc;
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+    min-height: 150px;
+    padding: 10px;
+    border-radius: 15px;
+    word-break: break-all;
+}
+
+.customer_details__tracking_details {
+    .ant-steps-item-title {
+        font-size: 13px;
+    }
+
+    .ant-steps-item-description {
+        font-size: 12px !important;
+    }
+
+    .ant-steps-vertical>.ant-steps-item .ant-steps-item-title {
+        line-height: 22px !important;
+    }
+}
+
+.label_text {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 11px;
+}
+
+@media screen and (max-width: 1024px) {
+    .upload-document-box {
+        flex-wrap: wrap;
+
+        button {
+            font-size: 13px;
+            padding: 0px 8px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .save-buttons {
+        display: flex;
+        margin-top: 10px;
+
+        button {
+            padding: 0px 10px;
+        }
+    }
+
+    .past-order-search-field,
+    .active-order-search-field {
+        max-width: 320px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .upload-document-box {
+        flex-wrap: initial;
+
+        button {
+            font-size: 14px;
+            padding: 4px 15px;
+        }
+    }
+
+    .update-customer-section-title {
+        margin-top: 15px;
+    }
+
+    .save-buttons {
+        display: flex;
+        margin-top: 10px;
+
+        button {
+            padding: 0px 10px;
+        }
+    }
+
+    .past_orders__listing,
+    .active_orders__listing {
+        .search_filter_position {
+            margin-bottom: 10px;
+        }
+    }
+
+    .search-field-margin {
+        margin-bottom: 10px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .upload-document-box {
+        flex-wrap: wrap;
+
+        button {
+            font-size: 13px;
+            padding: 0px 8px;
+        }
+    }
+}

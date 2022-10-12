@@ -1,0 +1,12 @@
+
+.document-view {
+  height: 600px;
+  overflow: scroll;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .review-document {
+    padding: 0px;
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "customer_details": {
+    "customer_id": 12,
+    "customer_name": "Supriyo",
+    "invoice_address1": "Flat.123, street 123",
+    "invoice_address2": "Marathalli_sur",
+    "country": "India",
+    "state": "Karnataka",
+    "city": "Bangalore Urban",
+    "postal_code": "560037",
+    "contact_name": "Supriyo ",
+    "phone_no": "9988776655",
+    "email": "supriyo.bose@duncantaylor.com",
+    "account_code": "A-123",
+    "vat_no": "V-123",
+    "payment_terms": "Credit - 60 Days",
+    "customer_po_no": "CO-123"
+  },
+  "shipping_details": {
+    "delivery_address1": "Q.No. S6, Ittina",
+    "delivery_address2": "Marathalli_su",
+    "shipping_country": "India",
+    "shipping_state": "Karnataka",
+    "shipping_city": "Bangalore Urban",
+    "shipping_postal_code": "560037",
+    "shipping_contact_name": "Supriyo",
+    "shipping_phone_no": "9988776655",
+    "shipping_email": "supriyo.bose@duncantaylor.com",
+    "shipper_details1": "Q.No. S6, Ittina Akya",
+    "shipper_details2": "M-sarjapur",
+    "who_organizes": "Organizer 2",
+    "shipper_contact_name": "Supriyo",
+    "shipper_phone_no": "9977554433",
+    "shipper_email": "supriyo.bose@duncantaylor.com",
+    "shipping_date": "2021-08-19",
+    "shipping_term": "ship 50 Days",
+    "contact_name": "Supriyo",
+    "phone_no": "9997775554",
+    "email": "supriyo.bose@duncantaylor.com",
+    "state": "West Bengal",
+    "city": "Kaliaganj",
+    "country": "India",
+    "postal_code": "760098"
+  },
+  "items": [
+    {
+      "cased_goods_id": 7,
+      "quantity": "12",
+      "product_code": "TESTCODE",
+      "product_description": "Aberlour THE OCTAVE™ PREMIUM 1988 31YO 19/42049% 2x700ml",
+      "unit_price": "1116.18",
+      "discount": "100",
+      "net_price": 13294.16,
+      "price_gbp": 2279
+    }
+  ],
+  "additional_charges": [
+    {
+      "item": "Bottle",
+      "cost_per_unit": "100",
+      "unit": "10",
+      "total_cost": "1000.00",
+      "slno": 1
+    }
+  ],
+  "supporting_documents": [
+    {
+      "doc_name": "pound2.jpg",
+      "doc_url": "https://dtsalesorders-stage.s3.amazonaws.com/supporting_documents/2021/08/12/pound2_1628745944098.jpg"
+    },
+    {
+      "doc_name": "pound2.jpg",
+      "doc_url": "https://dtsalesorders-stage.s3.ap-south-1.amazonaws.com/supporting_documents/2021/08/12/pound2_1628745951827.jpg"
+    }
+  ],
+  "total_case": "012",
+  "total_order_value": 14394.16,
+  "notes": "abc"
+}

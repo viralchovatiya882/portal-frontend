@@ -1,0 +1,124 @@
+.sales_order__customer_details {
+  .ant-form-item {
+    margin-bottom: 0 !important;
+  }
+}
+
+.sales_order__customer_details__add_new {
+  position: relative;
+  z-index: 9;
+  color: #1890ff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.new-sales-order {
+
+  .ant-steps.ant-steps-horizontal,
+  .common_card_section {
+    box-shadow: 0 0 10px #e1e1ec;
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 15px;
+    border-radius: 11px;
+  }
+}
+
+.sale-order-divider {
+  padding: 0 1rem;
+
+  p {
+    margin-bottom: -10px;
+    color: #a7a7a7;
+
+    &.text-black {
+      color: rgba(0, 0, 0, 0.85) !important;
+    }
+  }
+}
+
+.pound-icon {
+  margin-top: 0px;
+  margin-right: 4px;
+  font-size: 18px;
+  color: #8a8a8a;
+}
+
+.ant-input-prefix {
+  img {
+    height: 16px;
+  }
+}
+
+.steps-content {
+  border: none;
+}
+
+.sales-order-modal {
+  .ant-form-item-label {
+    label {
+      text-transform: uppercase;
+    }
+  }
+
+  .ant-input {
+    color: #8e8e8e;
+  }
+
+  .ant-input-affix-wrapper-focused {
+    border: none !important;
+    border-bottom: 1px solid #b1b1b1 !important;
+    border-color: none !important;
+    box-shadow: none !important;
+    color: greenyellow;
+  }
+
+  .ant-input-affix-wrapper {
+    border: none !important;
+    border-bottom: 1px solid #b1b1b1 !important;
+    padding: 4px 0px;
+  }
+
+  .ant-form-item-label>label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    display: inline-block;
+    margin-right: 0px;
+    color: #ff4d4f;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: "";
+  }
+
+  .ant-form-item-label>label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::after {
+    display: inline-block;
+    margin-left: 4px;
+    color: #ff4d4f;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: "*";
+  }
+}
+
+.create-order-fields-padding {
+  padding-left: 18px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .create-order-fields-padding {
+    padding-left: 0px;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .create-new-sales-order-text {
+    gap: 5px;
+  }
+
+  .create-order-fields-padding {
+    padding-left: 0px;
+  }
+
+  .sale-order-divider {
+    padding: 0px;
+  }
+}

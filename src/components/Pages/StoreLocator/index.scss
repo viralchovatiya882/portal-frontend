@@ -1,0 +1,11 @@
+.view-store-table {
+    .ant-table-wrapper {
+        .ant-spin-nested-loading {
+            .ant-spin-container {
+                .ant-table {
+                    overflow: auto;
+                }
+            }
+        }
+    }
+}

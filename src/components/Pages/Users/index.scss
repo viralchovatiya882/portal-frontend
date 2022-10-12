@@ -1,0 +1,17 @@
+.user_management__edit_user {
+    .ant-modal-body {
+        padding: 0 24px 24px 24px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .search-field-margin {
+       max-width: 290px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .search-field-margin {
+        margin-bottom: 10px !important;
+    }
+}

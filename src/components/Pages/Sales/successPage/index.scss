@@ -1,0 +1,36 @@
+.sales-order-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  h3 {
+    color: #00ad00;
+    font-size: 26px;
+  }
+  hr {
+    height: 2px;
+    background-color: #e2e2e2;
+    width: 100%;
+    border: none;
+  }
+  .success-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    p {
+      font-size: 16px;
+      color: #3f88ff;
+      font-weight: 600;
+    }
+    .view-order {
+      display: flex;
+      justify-content: center;
+      font-size: 14px;
+      label {
+        margin-right: 5px;
+      }
+    }
+  }
+}

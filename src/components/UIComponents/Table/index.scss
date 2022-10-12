@@ -1,0 +1,109 @@
+@import "./tooltip.scss";
+
+.highlight_row {
+    background: #ece6e6;
+}
+
+.highlight_row_anchor {
+    background: #f9e79f;
+}
+
+.ant-table-thead > tr > th.custom_column_style {
+    background: #f0f0f0;
+}
+
+.ant-table-tbody > tr > td.custom_column_style {
+    background: #ece6e6;
+}
+
+.ant-popover-inner-content {
+    padding: 12px 30px 12px 10px;
+    // width: 430px;
+}
+
+.inventory__ui__editing {
+    .ant-popover-inner-content {
+        width: 250px;
+    }
+}
+
+.ant-picker-dropdown {
+    z-index: 9999;
+}
+
+.react-resizable {
+    position: relative;
+    background-clip: padding-box;
+}
+
+.react-resizable-handle {
+    position: absolute;
+    right: -5px;
+    bottom: 0;
+    z-index: 1;
+    width: 10px;
+    height: 100%;
+    cursor: col-resize;
+}
+
+.mobile_card__title,
+.mobile_card_view__text {
+    overflow-wrap: break-word;
+    margin-right: 6px;
+}
+
+.card_overlay {
+    z-index: 99;
+}
+
+.mobile_card__title p {
+    margin: 0;
+    font-weight: bolder;
+}
+
+// .mobile_card__filter {
+//     .mobile_card__filter__tabs {
+//         .ant-tabs-content-holder {
+//             overflow: auto;
+//             height: 50vh;
+//         }
+//     }
+// }
+
+.fulfillment__status_listing {
+    overflow: auto;
+    height: 50vh;
+    width: 200px;
+}
+
+// @media only screen and (max-width: 576px) {
+//     .mobile_card_view__pagination {
+//         .ant-pagination-options {
+//             display: block !important;
+//         }
+//     }
+// }
+
+.action-not-allowed {
+    color: #00000040;
+    border-color: #d9d9d9;
+    background: #f5f5f5;
+    text-shadow: none;
+    box-shadow: none;
+    /* pointer-events: none; */
+    cursor: not-allowed;
+}
+
+.text-value-with-icon {
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+}
+
+.info_quick_modal {
+    .ant-modal-body {
+        padding: 24px !important;
+    }
+}

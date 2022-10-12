@@ -1,0 +1,33 @@
+.customer-footer-button {
+  display: flex;
+  justify-content: flex-end;
+
+  button:first-child {
+    margin-right: 10px;
+  }
+}
+
+.customer-footer-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3px;
+  margin-bottom: 10px;
+
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.add_new-customer-error {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -24px;
+  font-size: 12px;
+  margin-bottom: 20px;
+
+  span:first-child {
+    color: red;
+    margin-right: 5px;
+  }
+}

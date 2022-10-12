@@ -1,0 +1,17 @@
+.review-document {
+  padding: 20px;
+}
+
+.document-view {
+  height: 600px;
+  overflow: scroll;
+  margin-bottom: 20px;
+}
+
+.view__document {
+  .document-view {
+    overflow: hidden;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}

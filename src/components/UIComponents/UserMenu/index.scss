@@ -1,0 +1,9 @@
+.release_notes {
+    overflow: auto;
+    height: 40vh;
+    li {
+        .ant-badge-status-text {
+            margin: 0;
+        }
+    }
+}
